@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_anchor" style="-fx-background-color: #eee; -fx-background-radius: 15;" styleClass="main-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane style="-fx-background-color: #252935;" styleClass="menu-pane" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="96.0" fitWidth="118.0" layoutX="55.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icon2.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="17.0" layoutY="150.0" prefHeight="134.0" prefWidth="216.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <TextField fx:id="ip_address" prefHeight="26.0" prefWidth="188.0" promptText="IP Adress">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="username" promptText="Username" />
+                  <PasswordField fx:id="password" promptText="password" />
+                  <Button fx:id="connect" mnemonicParsing="false" prefHeight="26.0" prefWidth="230.0" text="connect" />
+                  <Button fx:id="disconnect" mnemonicParsing="false" prefHeight="26.0" prefWidth="234.0" text="disconnect" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="325.0" text="detaille" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="325.0" />
+            <Label fx:id="detaille" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="345.0" prefHeight="95.0" prefWidth="216.0" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="345.0" />
+            <AnchorPane fx:id="rename_layout" layoutX="14.0" layoutY="526.0" prefHeight="95.0" prefWidth="230.0" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Button fx:id="rename_apply" layoutX="30.0" layoutY="55.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="apply" />
+                  <Button fx:id="rename_annuler" layoutX="130.0" layoutY="55.0" mnemonicParsing="false" text="annuler" />
+                  <TextField fx:id="rename_text" layoutX="33.0" layoutY="22.0" promptText="rename text" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="add_layout" layoutX="11.0" layoutY="494.0" prefHeight="95.0" prefWidth="230.0" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Button fx:id="add_apply" layoutX="30.0" layoutY="55.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="apply" />
+                  <Button fx:id="add_annuler" layoutX="130.0" layoutY="55.0" mnemonicParsing="false" text="annuler" />
+                  <TextField fx:id="add_text" layoutX="33.0" layoutY="22.0" promptText="folder text" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="delete_layout" layoutX="11.0" layoutY="494.0" prefHeight="95.0" prefWidth="230.0" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Button fx:id="delete_apply" layoutX="30.0" layoutY="55.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="apply" />
+                  <Button fx:id="delete_annuler" layoutX="130.0" layoutY="55.0" mnemonicParsing="false" text="annuler" />
+                  <Label fx:id="delete_text" layoutX="26.0" layoutY="14.0" prefHeight="39.0" prefWidth="171.0" text="Label" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="249.0" style="-fx-background-color: #fff;" styleClass="centent-pane" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="-1.0" prefHeight="90.0" style="-fx-background-color: #252935;" styleClass="centent-pane" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox layoutX="14.0" layoutY="34.0" prefHeight="16.0" prefWidth="200.0" spacing="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <Button fx:id="upload" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="upload" />
+                              <String fx:value="header-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="download" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="download" />
+                              <String fx:value="header-button" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="delete" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="header-button" />
+                              <String fx:value="delete" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="rename" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="header-button" />
+                              <String fx:value="rename" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="refreche" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="header-button" />
+                              <String fx:value="refreche" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="add_folder" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css">
+                           <styleClass>
+                              <String fx:value="header-button" />
+                              <String fx:value="add_folder" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <AnchorPane layoutX="214.0" layoutY="72.0" prefHeight="39.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+                     <children>
+                        <Button fx:id="path_back" layoutX="6.0" layoutY="7.0" mnemonicParsing="false" prefWidth="60.0" text="Back" AnchorPane.leftAnchor="10.0" />
+                        <Button fx:id="path_set" layoutX="608.0" layoutY="1.0" mnemonicParsing="false" prefWidth="60.0" text="Apply" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="10.0" />
+                        <TextField fx:id="path_edit" layoutX="78.0" layoutY="7.0" prefHeight="26.0" prefWidth="555.0" promptText="Path://" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="7.0" />
+                     </children>
+                  </AnchorPane>
+                  <ProgressBar fx:id="progress" disable="true" layoutX="243.0" layoutY="37.0" prefHeight="25.0" prefWidth="464.0" progress="0.0" visible="false" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                  <Button fx:id="about" layoutX="682.0" layoutY="13.0" minHeight="30.0" mnemonicParsing="false" prefWidth="30.0" stylesheets="@style.css" AnchorPane.rightAnchor="10.0">
+                     <styleClass>
+                        <String fx:value="header-button" />
+                        <String fx:value="about" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label fx:id="status" layoutX="14.0" layoutY="578.0" prefHeight="16.0" prefWidth="697.0" />
+            <AnchorPane layoutX="45.0" layoutY="548.0" prefHeight="52.0" prefWidth="668.0" style="-fx-background-color: #252935;" styleClass="centent-pane" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Label fx:id="log" layoutY="23.0" prefHeight="23.0" prefWidth="722.0" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Label fx:id="status_reply" layoutX="41.0" layoutY="6.0" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table" editable="true" layoutX="131.0" layoutY="112.0" prefHeight="394.0" prefWidth="714.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+               <columns>
+                  <TableColumn fx:id="col_type" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="type" />
+                  <TableColumn fx:id="col_name" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="-1.0" text="name" />
+                  <TableColumn fx:id="col_size" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="size" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

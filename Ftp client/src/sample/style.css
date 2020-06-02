@@ -1,0 +1,73 @@
+.main-pane {
+
+    -fx-background-color: #f9fafa;
+}
+.menu-pane {
+
+    -fx-background-color: #f9fafa;
+}
+.centent-pane {
+
+    -fx-background-color: #f9fafa;
+}
+.header-button {
+    -fx-background-color: transparent;
+    -fx-background-size: 16px 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center, center;
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+.min-button {
+    -fx-background-image: url("img/headerbuttons/min-normal.png");
+}
+
+.close-button {
+    -fx-background-image: url("img/headerbuttons/close-normal.png");
+}
+
+.max-button {
+    -fx-background-image: url("img/headerbuttons/max-normal.png");
+}
+.upload{
+    -fx-background-image: url("img/upload-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.download{
+    -fx-background-image: url("img/download-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.delete{
+    -fx-background-image: url("img/delete-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.rename{
+    -fx-background-image: url("img/rename.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.refreche{
+    -fx-background-image: url("img/update-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.add_folder{
+    -fx-background-image: url("img/folder-add-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
+.about{
+    -fx-background-image: url("img/about-white.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: auto 16px;
+}
